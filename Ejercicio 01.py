@@ -1,54 +1,54 @@
 # Función para ingresar los paquetes
-def ingresar_paquetes():
-    paquetes = []
+def Ingresar_Paquetes():
+    Paquetes = []
 
     for i in range(5):
         while True:
-            cantidad = int(input(f"Ingrese la cantidad de paquetes del día {i + 1}: "))
+            Cantidad = int(input(f"Ingrese la cantidad de paquetes del día {i + 1}: "))
 
-            if cantidad >= 0:
-                paquetes.append(cantidad)
+            if Cantidad >= 0:
+                Paquetes.append(Cantidad)
                 break
             else:
                 print("Error: la cantidad no puede ser negativa.")
 
-    return paquetes
+    return Paquetes
 
 
 # Función para mostrar el vector
-def mostrar_vector(paquetes):
+def Mostrar_Vector(paquetes):
     print("\nCantidades registradas:")
-    for cantidad in paquetes:
-        print(cantidad, end=" ")
+    for Cantidad in Paquetes:
+        print(Cantidad, end=" ")
     print()
 
 
 # Función para calcular el total
-def calcular_total(paquetes):
-    return sum(paquetes)
+def Calcular_Total(Paquetes):
+    return sum(Paquetes)
 
 
 # Función para obtener la cantidad mayor
-def obtener_mayor(paquetes):
-    return max(paquetes)
+def Obtener_Mayor(Paquetes):
+    return max(Paquetes)
 
 
 # Función para contar los días con más de 20 paquetes
-def contar_dias_mas_20(paquetes):
-    contador = 0
+def Contar_Dias(Paquetes):
+    Contador = 0
 
-    for cantidad in paquetes:
-        if cantidad > 20:
-            contador += 1
+    for Cantidad in Paquetes:
+        if Cantidad > 20:
+            Contador += 1
 
-    return contador
+    return Contador
 
 
 # Programa principal
-paquetes = ingresar_paquetes()
+Paquetes = Ingresar_Paquetes()
 
-mostrar_vector(paquetes)
+Mostrar_Vector(Paquetes)
 
-print("\nTotal de paquetes procesados:", calcular_total(paquetes))
-print("Cantidad mayor registrada:", obtener_mayor(paquetes))
-print("Días con más de 20 paquetes:", contar_dias_mas_20(paquetes))
+print("\nTotal de paquetes procesados:", Calcular_Total(Paquetes))
+print("Cantidad mayor registrada:", Obtener_Mayor(Paquetes))
+print("Días con más de 20 paquetes:", Contar_Dias(Paquetes))
